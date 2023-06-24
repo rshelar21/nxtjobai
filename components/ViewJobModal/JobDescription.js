@@ -44,8 +44,8 @@ const JobDescription = () => {
           <br />
           <h3 className="text-gray-dark font-medium">Responsibilities:</h3>
           <ul className="list-disc pl-3">
-            {resposList.map((item) => (
-              <li className="">{item.desc}</li>
+            {resposList.map((item, index) => (
+              <li className="" key={index}>{item.desc}</li>
             ))}
           </ul>
           <h3 className="text-gray-dark font-medium">Requirements:</h3>

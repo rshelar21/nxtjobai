@@ -29,7 +29,7 @@ const Modal = () => {
   }, [modalType]);
   return (
     <>
-      <div className={`w-full inset-0 z-40 backdrop-blur-[2px] bg-black-light flex justify-center items-center  ${modalType ? 'fixed' : 'none'}`}>
+      <div className={`w-full inset-0 z-40 backdrop-blur-[2px] bg-black-light flex justify-center items-center ${modalType ? 'fixed' : 'none'}`}>
         <RenderModal modalType={...modalType} />
       </div>
     </>

@@ -63,7 +63,7 @@ const ViewJobModal = () => {
           <div className="flex gap-x-5 h-full pt-[10px]">
             <div className="px-[10px] py-5 w-[213px] border-r h-full">
               <div className="flex flex-col gap-[10px]">
-                {modalSideBar?.map((item) => (
+                {modalSideBar?.map((item, index) => (
                   <div
                     className={`flex items-center text-[#5A5A5A] rounded-lg 
                 px-[10px] py-[6px] cursor-pointer gap-[10px] 
@@ -71,6 +71,7 @@ const ViewJobModal = () => {
                   titleType === item.link && "bg-purple-light text-purple-dark"
                 }`}
                     onClick={() => handlerSetViewJob(item.link)}
+                    key={index}
                   >
                     <div className="">{item?.icon}</div>
                     <span className="text-xs">{item.title}</span>

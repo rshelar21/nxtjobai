@@ -21,7 +21,7 @@ const Note = () => {
           <div className="text-[#5A5A5A] text-center">
             <h3 className="font-semibold text-2xl">No notes created</h3>
             <p className="text-sm">
-              You can tap the "Create New Notes" Button to start taking notes!
+              You can tap the `&quot;`Create New Notes`&quot;` Button to start taking notes!
             </p>
           </div>
         </div>
