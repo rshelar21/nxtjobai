@@ -2,26 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  max-height: 100vh;
+  background: #F9F8F8;
+
 }
+
+@layer components {
+  .icons { 
+    @apply  w-7 h-7 relative;
+  }
+  .inputField {
+    @apply px-5 py-3 border border-[#E4E4E4] w-full rounded-md outline-none focus:outline-none placeholder:text-[#E4E4E4] placeholder:text-base
+    mb-[10px];
+  }
+  .button {
+    @apply px-[18px] py-4 w-full rounded-md 
+  } 
+  .button_modal {
+    @apply py-1 px-4 rounded-lg font-medium text-base flex items-center justify-center w-36 gap-1
+  }
+  .tags_modal {
+    @apply py-2 px-[10px] flex items-center h-8 w-[148px] bg-green-light text-green-dark justify-between rounded-md
+  }
+  .list_style {
+    @apply relative pb-5 before:absolute before:bg-blue-dark before:w-4 before:h-4 before:content-[''] before:top-0 before:left-2 before:rounded-full after:content-[''] after:w-[1px] 
+    after:h-full  after:top-1 after:left-[15px] after:absolute 
+    after:border-l-2 after:border-dashed after:border-blue-dark
+    last:after:hidden last:pb-0
+  }
+
+  .btn_tag {
+    @apply flex items-center justify-center p-2 border-dashed rounded-full border-2 border-[#9E9E9E]
+  }
+  .btn_alert {
+    @apply  bg-red-light text-red-dark flex items-center justify-between text-xs rounded px-[10px] py-2 space-x-1
+  }
+}
+
+
