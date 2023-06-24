@@ -6,6 +6,7 @@ import AddJobModal from "./AddJobModal";
 import ViewJobModal from "./ViewJobModal";
 
 const RenderModal = (modalType) => {
+  console.log(modalType)
   const modal = modalType.modalType
   switch (modal) {
     case "addJob":
@@ -31,8 +32,8 @@ const Modal = () => {
     <>
     {
       modalType &&
-      <div className="w-full inset-0 z-40 backdrop-blur-[2px] bg-black bg-opacity-30 flex justify-center items-center fixed">
-        <RenderModal modalType={...modalType} />
+      <div className="w-full inset-0 z-40 backdrop-blur-sm bg-black bg-opacity-30 flex justify-center items-center fixed">
+        <RenderModal modalType={modalType} />
       </div>
     }
     </>
