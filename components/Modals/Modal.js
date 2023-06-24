@@ -32,7 +32,7 @@ const Modal = () => {
     <>
     {
       modalType &&
-      <div className="w-full inset-0 z-40 backdrop-blur-sm bg-black bg-opacity-30 flex justify-center items-center fixed">
+      <div className="w-full inset-0 z-40 backdrop-blur-xs bg-black-light flex justify-center items-center fixed">
         <RenderModal modalType={modalType} />
       </div>
     }
