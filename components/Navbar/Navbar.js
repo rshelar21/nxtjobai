@@ -1,6 +1,6 @@
-import React from "react";
+'use client'
+import React, {useState} from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { HiChevronDown } from "react-icons/hi";
 import { TbBellFilled } from "react-icons/tb";
 
@@ -28,11 +28,12 @@ const navLinks = [
   {
     id: 5,
     title: "Job Tracker & Networking",
-    link: "/",
+    link: "/job-tracker",
   },
 ];
 
 const Navbar = () => {
+  const [active, setActive] = useState('/job-tracker');
   return (
     <>
       <div className="flex items-center justify-between w-full 
@@ -47,19 +48,22 @@ const Navbar = () => {
               {navLinks?.map((link) => (
                 <li
                   key={link.id}
-                  className="text-gray-dark last:text-purple-dark
-                last:bg-purple-light rounded-[8px]"
+                  className={`text-gray-dark rounded-[8px] cursor-pointer transition-all duration-300 ease-in-out 
+                   ${active === link.link ? 'bg-purple-light' : ''} 
+                   ${active === link.link ? 'text-purple-dark' : ''}
+
+                   `}
+                onClick={() => setActive(link.link)}
                 >
-                  <Link
-                    href={link.link}
+                  <div
                     className="flex px-5 py-[10px] items-center gap-x-2 
-                    text-sm"
+                    text-sm hover:text-purple-dark"
                   >
                     {link.title}
                     <span>
                       <HiChevronDown className="w-5 h-5"/>
                     </span>
-                  </Link>
+                  </div>
                 </li>
               ))}
             </ul>

@@ -15,13 +15,13 @@ export const sideLinks = [
     {
         id : 2,
         title : "Networking",
-        link : "/boards",
+        link : "/networking",
         icon : <LuNetwork className="absolute w-full h-full"/>
     },
     {
         id : 3,
         title : "Archive Jobs",
-        link : "/boards",
+        link : "/archive-jobs",
         icon : <MdArchive className="absolute w-full h-full"/>
     },
     {
