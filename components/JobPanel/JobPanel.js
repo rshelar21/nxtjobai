@@ -21,7 +21,6 @@ const JobPanel = () => {
   const [appliedJobs, setAppliedJobs] = useState(appliedJobList);
 
   const hadnlerDrag = (result) => {
-    console.log(result);
     const { source, destination } = result;
     if (!destination) return;
     let add;
@@ -47,6 +46,7 @@ const JobPanel = () => {
       setSavedJobs(updated);
     }
   };
+  console.log(savedJobs);
   return (
     <>
       <div className="w-full pl-5">

@@ -137,7 +137,7 @@ export const savedJobList = [
 
 export const appliedJobList = [
     {
-      id: 4,
+      id: 5,
       title: "UI/UX Designer",
       company: "Ajmera Infotech Inc.",
     },
@@ -145,7 +145,7 @@ export const appliedJobList = [
 
 export const interviewList = [
     {
-      id: 4,
+      id: 6,
       title: "UI/UX Designer",
       company: "Ajmera Infotech Inc.",
     },
@@ -153,7 +153,7 @@ export const interviewList = [
 
 export const offersList = [
     {
-      id: 4,
+      id: 7,
       title: "UI/UX Designer",
       company: "Ajmera Infotech Inc.",
     },
@@ -161,7 +161,7 @@ export const offersList = [
 
 export const rejectedList = [
     {
-      id: 4,
+      id: 8,
       title: "UI/UX Designer",
       company: "Ajmera Infotech Inc.",
     },
